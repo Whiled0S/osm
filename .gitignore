@@ -1,4 +1,7 @@
 /postgresdata
+/data
+
+!/data/togliatty.osm.pbf
 
 .idea
 .DS_Store

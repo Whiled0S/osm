@@ -12,6 +12,12 @@ services:
     volumes:
     - ./postgresdata:/var/lib/postgresql/12/main
     command: "bash /app/start.sh"
+  router:
+    container_name: router
+    image: osrm/osrm-backend
+    volumes:
+    - ./data:/data
+    command: "osrm-routed --algorithm mld /data/togliatty.osrm"
   nginx:
     container_name: nginx
     image: nginx
